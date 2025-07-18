@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.games.drawing.DrawingActivity">
+
+    <com.hompimpa.comfylearn.views.Board
+        android:id="@+id/board"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/top_action_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_save"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Save Drawing"
+            android:src="@drawable/ic_save"
+            android:tooltipText="Save"
+            app:tint="@color/colorAccent" />
+
+        <ImageButton
+            android:id="@+id/btn_clear"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Clear Board"
+            android:src="@drawable/ic_clear"
+            android:tooltipText="Clear All"
+            app:tint="@color/colorAccent" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DDFFFFFF"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageButton
+                android:id="@+id/btn_coloring_page"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Load Coloring Page"
+                android:src="@drawable/ic_coloring_page"
+                android:tooltipText="Coloring Page"
+                app:tint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/btn_pick_color"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Pick Color"
+                android:src="@drawable/ic_color_picker"
+                android:tooltipText="Pick Color"
+                app:tint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/btn_eraser"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Eraser"
+                android:src="@drawable/ic_eraser"
+                android:tooltipText="Eraser"
+                app:tint="@color/colorAccent" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?android:attr/listDivider" />
+
+            <ImageButton
+                android:id="@+id/btn_brush_small"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Small Brush"
+                android:src="@drawable/ic_brush_small"
+                android:tooltipText="Small Brush"
+                app:tint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/btn_brush_medium"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Medium Brush"
+                android:src="@drawable/ic_brush_medium"
+                android:tooltipText="Medium Brush"
+                app:tint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/btn_brush_large"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Large Brush"
+                android:src="@drawable/ic_brush_large"
+                android:tooltipText="Large Brush"
+                app:tint="@color/colorAccent" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?android:attr/listDivider" />
+
+            <ImageButton
+                android:id="@+id/btn_draw_shape"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Draw Shape"
+                android:src="@drawable/ic_shape"
+                android:tooltipText="Draw Shape"
+                app:tint="@color/colorAccent" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.games.GamesFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+
+            <ImageButton
+                android:id="@+id/buttonOpenGameFill"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Button Games Fill"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_spelling"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <ImageButton
+                android:id="@+id/buttonOpenGameArithmetic"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="80dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Button Games Arithmetic"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_counting"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <ImageButton
+                android:id="@+id/buttonOpenGameDrawing"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="80dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Button Games Drawing"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_drawing"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonOpenGameFill"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <ImageButton
+                android:id="@+id/buttonOpenGamePuzzle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="80dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Button Games Puzzle"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_puzzle"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonOpenGameArithmetic"
+                app:layout_constraintWidth_percent="0.45" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/scroll_indicator"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_scroll_down"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/colorAccent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

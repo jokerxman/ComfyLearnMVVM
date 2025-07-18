@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "1005345375717",
+    "project_id": "comfy-learn",
+    "storage_bucket": "comfy-learn.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005345375717:android:56efdf8bf8dbc6bba35b0c",
+        "android_client_info": {
+          "package_name": "com.hompimpa.comfylearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005345375717-bn28hfduke2t1qkph6ccsf903uaef7lo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hompimpa.comfylearn",
+            "certificate_hash": "c0531fd2c70a9d363c88db0f3b7aceef98741848"
+          }
+        },
+        {
+          "client_id": "1005345375717-nl50ebqkp48ig6cmqaji6uiu1bere83p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hompimpa.comfylearn",
+            "certificate_hash": "1ca4fc714c1ed7ca2c695fcf6a99565270f89507"
+          }
+        },
+        {
+          "client_id": "1005345375717-pjb9k11hag8pm320cjvnn63k59r8qd2q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hompimpa.comfylearn",
+            "certificate_hash": "086d335bc9dcc376afefc8d74e4eb9b8f1941402"
+          }
+        },
+        {
+          "client_id": "1005345375717-16lcr08jo9mg9oeoskd2rmvljvvbhhd1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyNvLzjKENM7Myi4NDzeKf8ry91UA-9rA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005345375717-16lcr08jo9mg9oeoskd2rmvljvvbhhd1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

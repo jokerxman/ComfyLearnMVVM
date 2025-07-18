@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Comfy Learn</string>
+    <string name="menu_study">Pelajaran</string>
+    <string name="menu_games">Permainan</string>
+    <string name="menu_learn_prog">Perkembangan</string>
+    <string name="menu_settings">Pengaturan</string>
+    <string name="menu_rate">Beri Nilai</string>
+    <string name="nav_header_calltoaction">Berlangganan</string>
+
+    <string name="login">Masuk</string>
+    <string name="register">Daftar</string>
+    <string name="sign_out">Keluar</string>
+    <string name="start_game">Mulai</string>
+    <string name="apply_changes">Terapkan Perubahan</string>
+    <string name="button_check">Periksa</string>
+    <string name="button_play_again">Main Lagi</string>
+    <string name="button_next">Berikutnya</string>
+    <string name="undo">Urungkan</string>
+    <string name="hint">Bantuan</string>
+
+    <string name="password">Sandi</string>
+    <string name="email">Alamat E-Mail</string>
+    <string name="name">Nama Lengkap Anda</string>
+    <string name="another_method">Atau Gunakan Metode Lain</string>
+    <string name="to_register">Belum punya akun? Buat akun sekarang!</string>
+    <string name="to_login">Sudah punya akun? Masuk di sini</string>
+    <string name="no_name">Nama tidak tersedia</string>
+    <string name="no_email">Email tidak tersedia</string>
+
+    <string name="dark_mode">Mode Gelap</string>
+    <string name="language_english">English</string>
+    <string name="language_indonesian">Bahasa Indonesia</string>
+
+    <string name="select_difficulty">Pilih Tingkat Kesulitan</string>
+    <string name="feedback_correct">Benar!</string>
+    <string name="feedback_incorrect">Kurang tepat. Coba lagi!</string>
+    <string name="feedback_incomplete">Harap isi semua kotak.</string>
+    <string name="congratulations_all_words">Selamat! Kamu telah menyelesaikan semua kata dalam kategori %1$s!</string>
+    <string name="no_more_words">Kata untuk pilihan ini sudah habis.</string>
+    <string name="puzzle_instructions">Susun huruf-huruf ini menjadi sebuah kata.</string>
+    <string name="puzzle_instructions_hard">Mode Sulit: Susun huruf-huruf ini!</string>
+    <string name="problems_solved_format">Terjawab: %1$d</string>
+    <string name="level_name_format">Level %1$d: %2$s</string>
+    <string name="level_type_addition">Penjumlahan Sederhana</string>
+    <string name="level_type_subtraction">Pengurangan Sederhana</string>
+    <string name="level_type_addition_hard">Penjumlahan hingga 10</string>
+    <string name="level_type_subtraction_hard">Pengurangan hingga 20</string>
+    <string name="level_type_mixed">Soal Campuran</string>
+    <string name="all_levels_completed">Semua Level Selesai!</string>
+    <string name="level_up_message">Naik Level! Sekarang Level %1$d</string>
+    <string name="error_generic_authentication">Autentikasi gagal.</string>
+    <string name="error_google_sign_in_canceled">Proses masuk dibatalkan.</string>
+    <string name="difficulty_easy">Mudah</string>
+    <string name="difficulty_medium">Sedang</string>
+    <string name="difficulty_hard">Sulit</string>
+    <string name="progress_status_not_started">Belum Dimulai</string>
+    <string name="progress_status_visited">Dikunjungi</string>
+    <string name="progress_status_completed">Selesai</string>
+    <string name="progress_status_words_solved">%1$d / %2$d kata</string>
+    <string name="progress_status_problems_solved">%1$d soal terjawab</string>
+    <string name="no_progress">Belum ada progres. Mulai belajar yuk!</string>
+    <string name="menu_home">Menu Utama</string>
+    <string name="image_of_spelling_item">Gambar</string>
+    <string name="spelling_categories">Kategori Mengeja</string>
+    <string name="select_a_category">Pilih Kategori</string>
+    <string-array name="game_category_keys">
+        <item>Hewan</item>
+        <item>Benda</item>
+    </string-array>
+    <string-array name="puzzle_difficulties">
+        <item>Mudah</item>
+        <item>Sedang</item>
+        <item>Sulit</item>
+    </string-array>
+
+    <string-array name="animal">
+        <item>Buaya</item>
+        <item>Berang-berang</item>
+        <item>Ayam</item>
+        <item>Anjing</item>
+        <item>Bebek</item>
+        <item>Rubah</item>
+        <item>Angsa</item>
+        <item>Kuda</item>
+        <item>Kanguru</item>
+        <item>Kepik</item>
+        <item>Macan Tutul</item>
+        <item>Singa</item>
+        <item>Panda</item>
+        <item>Nuri</item>
+        <item>Babi</item>
+        <item>Belalang Sembah</item>
+        <item>Kelinci</item>
+        <item>Domba Jantan</item>
+        <item>Badak</item>
+        <item>Penyu</item>
+        <item>Domba</item>
+        <item>Siput</item>
+        <item>Kura-kura</item>
+        <item>Tukan</item>
+    </string-array>
+    <string-array name="objek">
+        <item>Pendingin ruangan</item>
+        <item>Keranjang</item>
+        <item>Kasur</item>
+        <item>Blender</item>
+        <item>Botol</item>
+        <item>Sapu</item>
+        <item>Ember</item>
+        <item>Kalender</item>
+        <item>Kursi</item>
+        <item>Kain</item>
+        <item>Jemuran</item>
+        <item>Sisir</item>
+        <item>Sofa</item>
+        <item>Gorden</item>
+        <item>Meja</item>
+        <item>Kipas angin</item>
+        <item>Gantungan baju</item>
+        <item>Teko</item>
+        <item>Penghisap asap</item>
+        <item>Lampu</item>
+        <item>Lentera</item>
+        <item>Bola lampu</item>
+        <item>Microwave</item>
+        <item>Kain pel</item>
+        <item>Bingkai foto</item>
+        <item>Panci</item>
+        <item>Kulkas</item>
+        <item>Pengeras suara</item>
+        <item>Televisi</item>
+        <item>Pemanggang roti</item>
+    </string-array>
+
+</resources>

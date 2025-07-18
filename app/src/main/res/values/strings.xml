@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Comfy Learn</string>
+    <string name="menu_study">Study</string>
+    <string name="menu_games">Games</string>
+    <string name="menu_learn_prog">Progress</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_rate">Rate App</string>
+    <string name="nav_header_calltoaction">Subscribe</string>
+
+    <string name="sign_out">Sign Out</string>
+    <string name="start_game">Start Game</string>
+    <string name="apply_changes">Apply Changes</string>
+    <string name="button_check">Check</string>
+    <string name="button_play_again">Play Again</string>
+    <string name="button_next">Next</string>
+    <string name="undo">Undo</string>
+    <string name="hint">Hint</string>
+
+    <string name="password">Password</string>
+    <string name="email">E-Mail Address</string>
+    <string name="name">Your Name</string>
+    <string name="another_method">Or Use Another Method</string>
+    <string name="to_register">Don\'t have an account? Create one now!</string>
+    <string name="to_login">Already have an account? Sign in here</string>
+    <string name="no_name">No name available</string>
+    <string name="no_email">No email available</string>
+
+    <string name="dark_mode">Dark Mode</string>
+    <string name="language_english">English</string>
+    <string name="language_indonesian">Indonesian</string>
+
+    <string name="select_difficulty">Select Difficulty</string>
+    <string name="feedback_correct">Correct!</string>
+    <string name="feedback_incorrect">Incorrect. Try again!</string>
+    <string name="feedback_incomplete">Please fill all the slots.</string>
+    <string name="congratulations_all_words">Congratulations! You\'ve completed all words in the %1$s category!</string>
+    <string name="no_more_words">No more words available for this selection.</string>
+    <string name="puzzle_instructions">Unscramble the letters to form the word.</string>
+    <string name="puzzle_instructions_hard">Hard Mode: Unscramble the letters!</string>
+    <string name="problems_solved_format">Solved: %1$d</string>
+    <string name="level_name_format">Level %1$d: %2$s</string>
+    <string name="level_type_addition">Simple Addition</string>
+    <string name="level_type_subtraction">Simple Subtraction</string>
+    <string name="level_type_addition_hard">Addition up to 10</string>
+    <string name="level_type_subtraction_hard">Subtraction up to 20</string>
+    <string name="level_type_mixed">Mixed Problems</string>
+    <string name="all_levels_completed">All Levels Completed!</string>
+
+    <string name="error_generic_authentication">Authentication failed.</string>
+    <string name="error_google_sign_in_canceled">Login canceled.</string>
+
+    <string name="progress_status_not_started">Not Started</string>
+    <string name="progress_status_visited">Visited</string>
+    <string name="progress_status_completed">Completed</string>
+    <string name="progress_status_words_solved">%1$d / %2$d words</string>
+    <string name="progress_status_problems_solved">%1$d problems solved</string>
+    <string name="no_progress">No progress data yet. Start learning!</string>
+    <string name="empty" translatable="false" />
+    <string name="default_web_client_id">1005345375717-16lcr08jo9mg9oeoskd2rmvljvvbhhd1.apps.googleusercontent.com</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_medium">Medium</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="menu_home">Home</string>
+    <string name="image_of_spelling_item">image item</string>
+    <string name="spelling_categories">Spelling Categories</string>
+    <string name="select_a_category">Select a Category</string>
+    <string name="level_up_message">Level Up! Now on Level %1$d</string>
+
+    <string-array name="game_category_keys">
+        <item>animal</item>
+        <item>objek</item>
+    </string-array>
+    <string-array name="puzzle_difficulties">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+    </string-array>
+    <string-array name="alphabets" translatable="false">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+    <string-array name="consonants" translatable="false">
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+    <string-array name="spell" translatable="false">
+        <item>ba,bi,bu,be,bo</item>
+        <item>ca,ci,cu,ce,co</item>
+        <item>da,di,du,de,do</item>
+        <item>fa,fi,fu,fe,fo</item>
+        <item>ga,gi,gu,ge,go</item>
+        <item>ha,hi,hu,he,ho</item>
+        <item>ja,ji,ju,je,jo</item>
+        <item>ka,ki,ku,ke,ko</item>
+        <item>la,li,lu,le,lo</item>
+        <item>ma,mi,mu,me,mo</item>
+        <item>na,ni,nu,ne,no</item>
+        <item>pa,pi,pu,pe,po</item>
+        <item>qa,qi,qu,qe,qo</item>
+        <item>ra,ri,ru,re,ro</item>
+        <item>sa,si,su,se,so</item>
+        <item>ta,ti,tu,te,to</item>
+        <item>va,vi,vu,ve,vo</item>
+        <item>wa,wi,wu,we,wo</item>
+        <item>xa,xi,xu,xe,xo</item>
+        <item>ya,yi,yu,ye,yo</item>
+        <item>za,zi,zu,ze,zo</item>
+    </string-array>
+    <string-array name="animal">
+        <item>Alligator</item>
+        <item>Beaver</item>
+        <item>Chicken</item>
+        <item>Dog</item>
+        <item>Duck</item>
+        <item>Fox</item>
+        <item>Goose</item>
+        <item>Horse</item>
+        <item>Kangaroo</item>
+        <item>Ladybug</item>
+        <item>Leopard</item>
+        <item>Lion</item>
+        <item>Panda</item>
+        <item>Parrot</item>
+        <item>Pig</item>
+        <item>Praying Mantis</item>
+        <item>Rabbit</item>
+        <item>Ram</item>
+        <item>Rhino</item>
+        <item>Sea Turtle</item>
+        <item>Sheep</item>
+        <item>Snail</item>
+        <item>Tortoise</item>
+        <item>Toucan</item>
+    </string-array>
+    <string-array name="objek">
+        <item>Air conditioner</item>
+        <item>Basket</item>
+        <item>Bedsheet</item>
+        <item>Blender</item>
+        <item>Bottle</item>
+        <item>Broom</item>
+        <item>Bucket</item>
+        <item>Calendar</item>
+        <item>Chair</item>
+        <item>Cloth</item>
+        <item>Clothes stand</item>
+        <item>Comb</item>
+        <item>Couch</item>
+        <item>Curtains</item>
+        <item>Desk</item>
+        <item>Fan</item>
+        <item>Hanger</item>
+        <item>Kettle</item>
+        <item>Kitchen hood</item>
+        <item>Lamp</item>
+        <item>Lantern</item>
+        <item>Lightbulb</item>
+        <item>Microwave</item>
+        <item>Mop</item>
+        <item>Photo frame</item>
+        <item>Pot</item>
+        <item>Refrigerator</item>
+        <item>Speaker</item>
+        <item>Television</item>
+        <item>Toaster</item>
+    </string-array>
+</resources>

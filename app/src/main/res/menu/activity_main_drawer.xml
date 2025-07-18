@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/main_item"
+        android:title="@string/empty">
+        <menu>
+            <item
+                android:id="@+id/nav_study"
+                android:icon="@drawable/ic_menu_study"
+                android:title="@string/menu_study" />
+            <item
+                android:id="@+id/nav_games"
+                android:icon="@drawable/ic_menu_games"
+                android:title="@string/menu_games" />
+            <item
+                android:id="@+id/nav_learnprog"
+                android:icon="@drawable/ic_menu_learnprog"
+                android:title="@string/menu_learn_prog" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/other_item"
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_settings"
+                android:title="@string/menu_settings"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/ic_menu_rate"
+                android:title="@string/menu_rate"
+                app:showAsAction="ifRoom" />
+        </menu>
+    </item>
+</menu>

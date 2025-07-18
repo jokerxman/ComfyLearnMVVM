@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#FFFEE8</color>
+    <color name="colorPrimaryDark">#FFFEE8</color>
+    <color name="colorAccent">#A67032</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="button_default_bg">#A67032</color> <color name="feedback_positive_bg">#C8E6C9</color> <color name="feedback_negative_bg">#FFCDD2</color> <color name="feedback_neutral_bg">#BBDEFB</color>
+
+</resources>

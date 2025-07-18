@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg width="210mm" height="297mm" viewBox="0 0 210 297" version="1.1" id="svg208721"
+    inkscape:version="1.2.2 (732a01da63, 2022-12-09)" sodipodi:docname="photoframe.svg"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview208723"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.38484849"
+     inkscape:cx="-857.48031"
+     inkscape:cy="770.43307"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs208718" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g212249"
+       transform="translate(0.6875,2.0625)">
+      <rect
+         style="fill:#7b5811;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.99588;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect208894"
+         width="135.51057"
+         height="105.93729"
+         x="39.150963"
+         y="123.40161"
+         rx="5.15625"
+         ry="5.84375" />
+      <rect
+         style="fill:#f3d9a4;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.47585;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect208894-9"
+         width="124.87503"
+         height="96.865997"
+         x="44.740963"
+         y="127.9726"
+         rx="5.15625"
+         ry="5.84375" />
+      <rect
+         style="fill:#fefdfb;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.07691;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect208894-9-4"
+         width="99.125412"
+         height="64.973549"
+         x="57.242283"
+         y="145.4537"
+         rx="5.15625"
+         ry="5.84375" />
+      <path
+         style="fill:#f3d9a4;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.783279;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 105.16961,87.931349 0.0259,-0.06904 -53.785645,34.724101 h 6.128053 l 48.703562,-32.004373 -0.35699,-0.226106 -0.19262,-0.150042 -0.18715,-0.174963 -0.11533,-0.125191 -0.13275,-0.162898 -0.098,-0.158372 -0.0935,-0.168932 -0.0675,-0.176473 -0.0501,-0.176474 -0.0261,-0.161389 -0.009,-0.153848 0.007,-0.206639 0.0392,-0.19608 0.0566,-0.188539 0.0566,-0.134242 z"
+         id="path212195"
+         sodipodi:nodetypes="ccccccccccccccccccccc" />
+      <path
+         style="fill:#f3d9a4;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.737403;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 111.77644,87.689556 -0.21989,-0.128995 47.71334,34.895989 h -5.41376 l -43.02666,-32.107749 0.31537,-0.226838 0.17018,-0.150525 0.16533,-0.175529 0.10177,-0.125595 0.11729,-0.163425 0.0866,-0.158883 0.0826,-0.169477 0.0596,-0.177043 0.0443,-0.177045 0.0232,-0.161909 0.008,-0.154345 -0.007,-0.207307 -0.0346,-0.196714 -0.05,-0.189148 -0.05,-0.134676 z"
+         id="path212195-9"
+         sodipodi:nodetypes="ccccccccccccccccccccc" />
+      <ellipse
+         style="fill:#f3d9a4;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.55084;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path212139"
+         cx="108.48617"
+         cy="88.47493"
+         rx="3.5564957"
+         ry="2.2161427" />
+    </g>
+  </g>
+</svg>

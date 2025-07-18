@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1005345375717",
+    "project_id": "comfy-learn",
+    "storage_bucket": "comfy-learn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005345375717:android:165f5af1e99ecabaa35b0c",
+        "android_client_info": {
+          "package_name": "com.hompimpa.comfylearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005345375717-fkkg4iii3hdifuuhqpimir9hommfur3j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyNvLzjKENM7Myi4NDzeKf8ry91UA-9rA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005345375717-fkkg4iii3hdifuuhqpimir9hommfur3j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
