@@ -1,8 +1,8 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.ComfyLearn" parent="Theme.Material3.DayNight.NoActionBar">
-    </style>
+<resources>
 
-    <style name="Theme.ComfyLearn" parent="Base.Theme.ComfyLearn" >
+    <style name="Base.Theme.ComfyLearn" parent="Theme.Material3.DayNight.NoActionBar"></style>
+
+    <style name="Theme.ComfyLearn" parent="Base.Theme.ComfyLearn">
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
     </style>

@@ -15,6 +15,7 @@ class MyApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        SoundManager.initialize(this)
         val prefs = SettingPreferences.getInstance(dataStore)
 
         applicationScope.launch {

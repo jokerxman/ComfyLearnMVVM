@@ -17,7 +17,6 @@ import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.ActivityPuzzleBinding
 import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.GameContentProvider
-import com.hompimpa.comfylearn.helper.SoundManager
 import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 import com.hompimpa.comfylearn.ui.games.DifficultySelectionActivity
 import com.hompimpa.comfylearn.views.PuzzleTileView
@@ -36,14 +35,18 @@ class PuzzleActivity : BaseActivity() {
     private val slotFilledBy = mutableMapOf<Int, View>()
     private val touchSlop by lazy { ViewConfiguration.get(this).scaledTouchSlop }
 
-    private var draggedView: View? = null
-    private var dXTouch = 0f
-    private var dYTouch = 0f
-    private var isDragging = false
-    private var initialTouchX = 0f
-    private var initialTouchY = 0f
-    private var originalTileX = 0f
-    private var originalTileY = 0f
+    private var currentDrag: DragState? = null
+
+    private data class DragState(
+        val view: View,
+        val initialX: Float,
+        val initialY: Float,
+        val originalX: Float,
+        val originalY: Float,
+        val dX: Float,
+        val dY: Float,
+        var isDragging: Boolean = false
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -114,73 +117,87 @@ class PuzzleActivity : BaseActivity() {
     private fun setupCharacterOptions(letters: List<Char>) {
         binding.layoutCharacterOptions.removeAllViews()
         letters.forEach { char ->
-            val tileView = LayoutInflater.from(this).inflate(
-                R.layout.item_character_option,
-                binding.layoutCharacterOptions,
-                false
-            ) as PuzzleTileView
+            val tileView = LayoutInflater.from(this)
+                .inflate(
+                    R.layout.item_character_option,
+                    binding.layoutCharacterOptions,
+                    false
+                ) as PuzzleTileView
             tileView.text = char.toString()
-            tileView.setOnTouchListener(OptionTileTouchListener(tileView))
+            tileView.setOnTouchListener(OptionTileTouchListener())
             binding.layoutCharacterOptions.addView(tileView)
         }
         binding.layoutCharacterOptions.post { binding.layoutCharacterOptions.rescatterChildren() }
     }
 
-    private inner class OptionTileTouchListener(private val tileView: View) : View.OnTouchListener {
+    private inner class OptionTileTouchListener : View.OnTouchListener {
         override fun onTouch(view: View, event: MotionEvent): Boolean {
             if (view.isInvisible) return false
-            when (event.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    isDragging = false
-                    initialTouchX = event.rawX
-                    initialTouchY = event.rawY
-                    originalTileX = tileView.x
-                    originalTileY = tileView.y
-                    draggedView = tileView
-                    binding.layoutCharacterOptions.bringChildToFront(tileView)
-                    dXTouch = tileView.x - event.rawX
-                    dYTouch = tileView.y - event.rawY
-                    return true
-                }
-
-                MotionEvent.ACTION_MOVE -> {
-                    if (draggedView != tileView) return false
-                    if (!isDragging && (abs(event.rawX - initialTouchX) > touchSlop || abs(event.rawY - initialTouchY) > touchSlop)) {
-                        isDragging = true
-                    }
-                    if (isDragging) {
-                        tileView.x = event.rawX + dXTouch
-                        tileView.y = event.rawY + dYTouch
-                    }
-                    return true
-                }
-
-                MotionEvent.ACTION_UP -> {
-                    if (draggedView != tileView) return false
-                    if (isDragging) {
-                        val droppedOnSlot =
-                            targetSlots.find { isViewOver(it, event.rawX, event.rawY) }
-                        droppedOnSlot?.let {
-                            placeLetterInSlot(
-                                tileView as TextView,
-                                it.tag as Int
-                            )
-                        } ?: returnTileToPile(tileView)
-                    }
-                    view.performClick()
-                    isDragging = false
-                    draggedView = null
-                    return true
-                }
+            return when (event.action) {
+                MotionEvent.ACTION_DOWN -> handleDragStart(view, event)
+                MotionEvent.ACTION_MOVE -> handleDragMove(event)
+                MotionEvent.ACTION_UP -> handleDragEnd(view, event)
+                else -> false
             }
-            return false
+        }
+    }
+
+    private fun handleDragStart(view: View, event: MotionEvent): Boolean {
+        currentDrag = DragState(
+            view = view,
+            initialX = event.rawX,
+            initialY = event.rawY,
+            originalX = view.x,
+            originalY = view.y,
+            dX = view.x - event.rawX,
+            dY = view.y - event.rawY
+        )
+        binding.layoutCharacterOptions.bringChildToFront(view)
+        return true
+    }
+
+    private fun handleDragMove(event: MotionEvent): Boolean {
+        val drag = currentDrag ?: return false
+        if (!drag.isDragging && (abs(event.rawX - drag.initialX) > touchSlop || abs(event.rawY - drag.initialY) > touchSlop)) {
+            drag.isDragging = true
+        }
+        if (drag.isDragging) {
+            drag.view.x = event.rawX + drag.dX
+            drag.view.y = event.rawY + drag.dY
+        }
+        return true
+    }
+
+    private fun handleDragEnd(view: View, event: MotionEvent): Boolean {
+        val drag = currentDrag ?: return false
+        if (drag.isDragging) {
+            val targetSlot = targetSlots.find { isViewOver(it, event.rawX, event.rawY) }
+            if (targetSlot != null) {
+                placeLetterInSlot(view as TextView, targetSlot.tag as Int)
+            } else if (isViewOver(binding.layoutCharacterOptions, event.rawX, event.rawY)) {
+                letTileStayAtNewPosition(view)
+            } else {
+                returnTileToPile(view, drag.originalX, drag.originalY)
+            }
+        }
+        view.performClick()
+        currentDrag = null
+        return true
+    }
+
+    private fun letTileStayAtNewPosition(tile: View) {
+        binding.layoutCharacterOptions.getChildState(tile)?.let {
+            it.x = tile.x
+            it.y = tile.y
+            it.initialized = true
         }
     }
 
     private fun removeLetterFromSlot(slotIndex: Int) {
         slotFilledBy.remove(slotIndex)?.let { tileInSlot ->
             tileInSlot.isVisible = true
-            returnTileToPile(tileInSlot)
+            binding.layoutCharacterOptions.getChildState(tileInSlot)?.initialized = false
+            binding.layoutCharacterOptions.requestLayout()
         }
         targetSlots[slotIndex].text = ""
     }
@@ -191,15 +208,15 @@ class PuzzleActivity : BaseActivity() {
         tileView.isInvisible = true
         slotFilledBy[slotIndex] = tileView
 
-        val formedWord = targetSlots.joinToString("") { it.text }
-        if (formedWord.length == viewModel.uiState.value?.wordToGuess?.length) {
+        if (slotFilledBy.size == viewModel.uiState.value?.wordToGuess?.length) {
+            val formedWord = targetSlots.joinToString("") { it.text }
             viewModel.checkWord(formedWord, currentCategory, currentDifficulty)
         }
     }
 
-    private fun returnTileToPile(tile: View) {
-        tile.x = originalTileX
-        tile.y = originalTileY
+    private fun returnTileToPile(tile: View, originalX: Float, originalY: Float) {
+        tile.x = originalX
+        tile.y = originalY
         binding.layoutCharacterOptions.getChildState(tile)?.let {
             it.x = tile.x
             it.y = tile.y
@@ -215,12 +232,8 @@ class PuzzleActivity : BaseActivity() {
     }
 
     private fun handleFeedback(feedback: Feedback) {
-        val sound =
-            if (feedback.isSuccess) SoundManager.Sound.CORRECT_ANSWER else SoundManager.Sound.INCORRECT_ANSWER
-        SoundManager.playSound(sound)
-
         if (feedback.isGameEnd || feedback.isSuccess) {
-            showEndGameFeedback(feedback.message, feedback.isSuccess, feedback.isGameEnd)
+            showPersistentFeedback(feedback.message, feedback.isSuccess, feedback.isGameEnd)
         } else {
             showTemporaryFeedback(feedback.message)
         }
@@ -241,7 +254,7 @@ class PuzzleActivity : BaseActivity() {
         )
     }
 
-    private fun showEndGameFeedback(message: String, isSuccess: Boolean, isGameEnd: Boolean) {
+    private fun showPersistentFeedback(message: String, isSuccess: Boolean, isGameEnd: Boolean) {
         binding.textViewFeedbackPopup.text = message
         val colorRes = when {
             isGameEnd -> R.color.feedback_neutral_bg

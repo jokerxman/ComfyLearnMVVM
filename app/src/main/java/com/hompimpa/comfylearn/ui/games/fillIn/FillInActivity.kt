@@ -63,7 +63,7 @@ class FillInActivity : BaseActivity() {
     private fun setupObservers() {
         viewModel.uiState.observe(this) { state ->
             displayImage(state.imagePath)
-            setupLetterSlots(state.word) // Simplified call
+            setupLetterSlots(state.word)
             setupLetterOptions(state.keyboardLetters)
         }
         viewModel.slotsState.observe(this) { slots ->

@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.FragmentAlphabetBinding
 import com.hompimpa.comfylearn.helper.SoundManager
-import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 
 class AlphabetFragment : Fragment() {
 
@@ -52,7 +51,7 @@ class AlphabetFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         displayLetter()
-        binding.letterImageView.setOnSoundClickListener {
+        binding.letterImageView.setOnClickListener {
             SoundManager.playSoundByName(requireContext(), currentLetter.toString())
         }
     }

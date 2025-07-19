@@ -49,6 +49,12 @@ class GamesViewModel : ViewModel() {
             putString(DifficultySelectionActivity.EXTRA_GAME_CATEGORY, category)
             putString(DifficultySelectionActivity.EXTRA_GAME_TYPE, gameType)
         }
-        _navigationEvent.value = Event(NavigationAction(DifficultySelectionActivity::class.java, extras, forResult = true))
+        _navigationEvent.value = Event(
+            NavigationAction(
+                DifficultySelectionActivity::class.java,
+                extras,
+                forResult = true
+            )
+        )
     }
 }

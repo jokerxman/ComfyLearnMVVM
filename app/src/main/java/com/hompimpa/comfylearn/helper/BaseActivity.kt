@@ -7,11 +7,9 @@ open class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        SoundManager.initialize(this)
     }
 
     override fun onDestroy() {
-        SoundManager.release()
         super.onDestroy()
     }
 }
