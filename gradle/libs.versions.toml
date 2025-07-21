@@ -16,10 +16,10 @@ viewpager2 = "1.1.0"
 uiTextAndroid = "1.8.3"
 
 # AndroidX Architecture Components (Lifecycle, LiveData, ViewModel, Navigation)
-lifecycleLivedataKtx = "2.9.1"
-lifecycleViewmodelKtx = "2.9.1"
-navigationFragmentKtx = "2.9.1"
-navigationUiKtx = "2.9.1"
+lifecycleLivedataKtx = "2.9.2"
+lifecycleViewmodelKtx = "2.9.2"
+navigationFragmentKtx = "2.9.2"
+navigationUiKtx = "2.9.2"
 
 # Firebase & Authentication
 firebaseBom = "33.16.0"
@@ -30,7 +30,7 @@ playServicesAuth = "21.3.0"
 credentials = "1.5.0"
 
 # Kotlin Coroutines
-kotlinxCoroutinesCore = "1.7.3"
+kotlinxCoroutinesCore = "1.8.1"
 
 # Data Storage
 datastorePreferences = "1.1.7"
