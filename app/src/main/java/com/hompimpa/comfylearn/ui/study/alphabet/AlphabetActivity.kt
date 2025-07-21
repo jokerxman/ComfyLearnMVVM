@@ -3,15 +3,15 @@ package com.hompimpa.comfylearn.ui.study.alphabet
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.ActivityAlphabetBinding
-import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 import com.hompimpa.comfylearn.ui.HomeActivity
 import com.hompimpa.comfylearn.ui.study.number.NumberActivity
 
-class AlphabetActivity : BaseActivity() {
+class AlphabetActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAlphabetBinding
     private val viewModel: AlphabetViewModel by viewModels()

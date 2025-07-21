@@ -5,14 +5,14 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.ActivitySettingsBinding
-import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 import com.hompimpa.comfylearn.ui.HomeViewModel
 import com.hompimpa.comfylearn.ui.auth.LoginActivity
 
-class SettingsActivity : BaseActivity() {
+class SettingsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySettingsBinding
     private val viewModel: SettingsViewModel by viewModels()

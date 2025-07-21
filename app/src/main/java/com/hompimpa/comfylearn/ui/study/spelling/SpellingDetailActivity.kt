@@ -7,14 +7,14 @@ import android.view.Gravity
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.ActivitySpellingDetailBinding
-import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.SoundManager
 import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 
-class SpellingDetailActivity : BaseActivity() {
+class SpellingDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySpellingDetailBinding
     private val viewModel: SpellingDetailViewModel by viewModels()

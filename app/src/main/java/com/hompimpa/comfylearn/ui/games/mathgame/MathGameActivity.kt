@@ -11,18 +11,18 @@ import android.widget.Button
 import android.widget.GridLayout
 import android.widget.ImageView
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.ActivityMathGameBinding
-import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.GameContentProvider
 import com.hompimpa.comfylearn.helper.SoundManager
 import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 import kotlinx.coroutines.launch
 
-class MathGameActivity : BaseActivity() {
+class MathGameActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMathGameBinding
     private val viewModel: MathGameViewModel by viewModels()

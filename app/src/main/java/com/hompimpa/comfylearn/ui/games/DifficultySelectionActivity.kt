@@ -5,12 +5,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.ActivityDifficultySelectionBinding
-import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 
-class DifficultySelectionActivity : BaseActivity() {
+class DifficultySelectionActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDifficultySelectionBinding
     private val viewModel: DifficultySelectionViewModel by viewModels()

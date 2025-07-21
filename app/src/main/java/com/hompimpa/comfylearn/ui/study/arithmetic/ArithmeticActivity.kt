@@ -6,13 +6,13 @@ import android.widget.GridLayout
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.ActivityArithmeticBinding
-import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.GameContentProvider
 import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 
-class ArithmeticActivity : BaseActivity() {
+class ArithmeticActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityArithmeticBinding
     private val viewModel: ArithmeticViewModel by viewModels()

@@ -8,14 +8,14 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.github.dhaval2404.colorpicker.ColorPickerDialog
 import com.github.dhaval2404.colorpicker.model.ColorShape
 import com.hompimpa.comfylearn.databinding.ActivityDrawingBinding
-import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 
-class DrawingActivity : BaseActivity() {
+class DrawingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDrawingBinding
     private val viewModel: DrawingViewModel by viewModels()

@@ -2,14 +2,14 @@ package com.hompimpa.comfylearn.ui.study.spelling
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.ActivitySpellingCategoryBinding
-import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.CategoryAdapter
 import com.hompimpa.comfylearn.helper.GameContentProvider
 
-class SpellingCategoryActivity : BaseActivity() {
+class SpellingCategoryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySpellingCategoryBinding
 

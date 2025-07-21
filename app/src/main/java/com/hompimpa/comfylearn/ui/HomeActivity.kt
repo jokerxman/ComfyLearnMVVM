@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -17,9 +18,8 @@ import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseUser
 import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.ActivityHomeBinding
-import com.hompimpa.comfylearn.helper.BaseActivity
 
-class HomeActivity : BaseActivity() {
+class HomeActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityHomeBinding

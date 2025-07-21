@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.doOnLayout
 import androidx.core.widget.TextViewCompat
@@ -16,13 +17,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.ActivityFillInBinding
-import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.GameContentProvider
 import com.hompimpa.comfylearn.helper.LetterOptionsAdapter
 import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 import kotlin.math.min
 
-class FillInActivity : BaseActivity() {
+class FillInActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFillInBinding
     private val viewModel: FillInViewModel by viewModels()

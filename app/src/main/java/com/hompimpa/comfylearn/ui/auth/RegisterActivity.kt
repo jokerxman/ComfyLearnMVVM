@@ -5,13 +5,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.hompimpa.comfylearn.databinding.ActivityRegisterBinding
 import com.hompimpa.comfylearn.helper.AuthResult
-import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 import com.hompimpa.comfylearn.ui.HomeActivity
 
-class RegisterActivity : BaseActivity() {
+class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
     private val viewModel: RegisterViewModel by viewModels()

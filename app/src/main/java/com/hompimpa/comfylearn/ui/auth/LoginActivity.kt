@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.credentials.CredentialManager
 import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
@@ -16,12 +17,11 @@ import com.google.android.libraries.identity.googleid.GoogleIdTokenParsingExcept
 import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.ActivityLoginBinding
 import com.hompimpa.comfylearn.helper.AuthResult
-import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 import com.hompimpa.comfylearn.ui.HomeActivity
 import kotlinx.coroutines.launch
 
-class LoginActivity : BaseActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     private val viewModel: LoginViewModel by viewModels()

@@ -10,12 +10,12 @@ import android.view.View
 import android.view.ViewConfiguration
 import android.widget.TextView
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.hompimpa.comfylearn.R
 import com.hompimpa.comfylearn.databinding.ActivityPuzzleBinding
-import com.hompimpa.comfylearn.helper.BaseActivity
 import com.hompimpa.comfylearn.helper.GameContentProvider
 import com.hompimpa.comfylearn.helper.setOnSoundClickListener
 import com.hompimpa.comfylearn.ui.games.DifficultySelectionActivity
@@ -23,7 +23,7 @@ import com.hompimpa.comfylearn.views.PuzzleTileView
 import java.util.Locale
 import kotlin.math.abs
 
-class PuzzleActivity : BaseActivity() {
+class PuzzleActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPuzzleBinding
     private val viewModel: PuzzleViewModel by viewModels()
@@ -63,7 +63,9 @@ class PuzzleActivity : BaseActivity() {
         setupClickListeners()
         updateInstructions()
 
-        viewModel.loadNextWord(currentCategory, currentDifficulty)
+        if (savedInstanceState == null) {
+            viewModel.loadNextWord(currentCategory, currentDifficulty)
+        }
     }
 
     private fun setupObservers() {
